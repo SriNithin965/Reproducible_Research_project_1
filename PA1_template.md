@@ -91,15 +91,13 @@ acv1 <-setNames(acv1,c("dates","steps"))
 head(acv1)
 ```
 
-```
-##        dates steps
-## 1 2012-10-01    NA
-## 2 2012-10-02   126
-## 3 2012-10-03 11352
-## 4 2012-10-04 12116
-## 5 2012-10-05 13294
-## 6 2012-10-06 15420
-```
+       dates steps
+1 2012-10-01    NA
+2 2012-10-02   126
+3 2012-10-03 11352
+4 2012-10-04 12116
+5 2012-10-05 13294
+6 2012-10-06 15420
 
 ```r
 with(acv1,hist(steps,xlab="steps",ylab="frequency",main="Daily steps",col="red"))
@@ -114,10 +112,8 @@ acv1 <- data.table(acv1)
 acv1[, .(Mean_Steps = mean(steps, na.rm = TRUE), Median_Steps = median(steps, na.rm = TRUE))]
 ```
 
-```
-##    Mean_Steps Median_Steps
-## 1:   10766.19        10765
-```
+   Mean_Steps Median_Steps
+1:   10766.19        10765
 ## Time series plot of the average number of steps taken
 
 ```r
@@ -184,10 +180,8 @@ acv3 <- data.table(acv3)
 acv3[, .(Mean_Steps = mean(steps), Median_Steps = median(steps))]
 ```
 
-```
-##    Mean_Steps Median_Steps
-## 1:    9354.23        10395
-```
+   Mean_Steps Median_Steps
+1:    9354.23        10395
 
 ```r
 with(acv3,hist(steps,xlab="steps",ylab="frequency",main="Daily steps",col="red"))
